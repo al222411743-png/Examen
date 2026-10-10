@@ -1,0 +1,121 @@
+
+:root {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+
+#theme-light:checked ~ .card {
+    --card-bg: #ffffff;
+    --text-color: #1a1a1a;
+    --text-muted: #666666;
+    --primary-color: #3b82f6; 
+    --border-color: #e5e7eb;
+}
+#theme-light:checked ~ .card .label-light {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#theme-dark:checked ~ .card {
+    --card-bg: #1f2937;
+    --text-color: #f9fafb;
+    --text-muted: #9ca3af;
+    --primary-color: #3b82f6; 
+    --border-color: #374151;
+}
+#theme-dark:checked ~ .card .label-dark {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+#theme-custom:checked ~ .card {
+    --card-bg: #c5f0c2; 
+    --text-color: #173e21; 
+    --text-muted: #5f6e63;
+    --primary-color: #16a34a; 
+    --border-color: #d1d5db;
+}
+#theme-custom:checked ~ .card .label-custom {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+}
+
+.theme-switcher {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.theme-switcher label {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-color);
+    border-right: 1px solid var(--border-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.theme-switcher label:last-child {
+    border-right: none;
+}
+
+
+h2 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 0 0 24px 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}

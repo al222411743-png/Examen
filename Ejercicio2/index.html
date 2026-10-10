@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Clase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Proyecto 1: Calculadora de Edad -->
+        <section class="card">
+            <h2>Age Calculator</h2>
+            <div class="form-group">
+                <label for="birthDate">Enter your birth date (DD/MM/YYYY):</label>
+                <div class="input-wrapper">
+                    <input type="text" id="birthDate" placeholder="Ej: 21/11/2002">
+                    <span class="icon">📅</span>
+                </div>
+            </div>
+            <button id="btnAge" class="btn">Calculate</button>
+            <p id="ageResult" class="result"></p>
+        </section>
+
+        <!-- Proyecto 2: Convertidor de Temperatura -->
+        <section class="card">
+            <h2>Temperature Converter</h2>
+            <p class="subtitle">Enter the temperature, select units and submit</p>
+            <div class="temp-inputs">
+                <input type="number" id="tempValue" placeholder="0.00">
+                <select id="fromUnit">
+                    <option value="" disabled selected>From Unit</option>
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+                <select id="toUnit">
+                    <option value="" disabled selected>To Unit</option>
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+                <button id="btnTemp" class="btn btn-dark" disabled>Convert</button>
+            </div>
+            <p id="tempResult" class="result temp-res"></p>
+        </section>
+
+        <!-- Proyecto 3: Task Tracker -->
+        <section class="card">
+            <h2>Task Tracker</h2>
+            <div class="task-input-container">
+                <input type="text" id="taskInput" placeholder="Start writing and press enter to create task">
+                <button id="btnAddTask" class="btn-icon">↵</button>
+            </div>
+            <ul id="taskList" class="task-list">
+                <!-- Las tareas se renderizan aquí -->
+            </ul>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
